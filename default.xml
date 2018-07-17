@@ -6,8 +6,23 @@
   
   <default revision="master"
            remote="icshwi"
-           sync-j="4" />
+           sync-j="2" />
   
-  <project path="base" name="e3-base" />
-  <project path="require" name="e3-require" />
+  <project path="base"                     name="e3-base"    />
+  <project path="require"                  name="e3-require" />
+  <project path="siteMod/common/iocStats"  name="e3-iocStats"  />
+  <project path="siteMod/common/autosave"  name="e3-autosave"  />
+  <project path="siteMod/common/asyn"      name="e3-asyn"      />
+  <project path="siteMod/common/modbus"    name="e3-modbus"    />
+  <project path="siteMod/common/ipmiComm"  name="e3-ipmiComm"  />
+  <project path="siteMod/common/sequencer" name="e3-sequencer" />
+  <project path="siteMod/common/sscan"     name="e3-sscan"     />
+  <project path="siteMod/common/std"       name="e3-std"  />
+  <project path="siteMod/common/ip"        name="e3-ip"      />
+  <project path="siteMod/common/calc"      name="e3-calc"    />
+  <project path="siteMod/common/pcre"      name="e3-pcre"  />
+  <project path="siteMod/common/StreamDevice" name="e3-StreamDevice" />
+  <project path="siteMod/common/s7plc"     name="e3-s7plc"     />
+  <project path="siteMod/common/recsync"   name="e3-recsync" />
+
 </manifest>
