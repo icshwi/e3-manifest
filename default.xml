@@ -1,11 +1,11 @@
 <manifest>
   <remote  name="e3"
-           fetch="https://github.com/icshwi/"/>
+           fetch="https://github.com/icshwi/e3/"/>
   <remote  name="jeonghanlee"
            fetch="https://github.com/jeonghanlee/"/>
   
   <default revision="master"
-           remote="aosp"
+           remote="e3"
            sync-j="4" />
   
   <project path="base" name="e3-base" />
