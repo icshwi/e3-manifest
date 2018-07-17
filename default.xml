@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="icshwi"
            fetch="https://github.com/icshwi/"/>
@@ -6,7 +7,7 @@
   
   <default revision="master"
            remote="icshwi"
-           sync-j="2" />
+           sync-j="4" />
   
   <project path="base"                     name="e3-base"    />
   <project path="require"                  name="e3-require" />
@@ -26,5 +27,10 @@
   <project path="siteMod/common/recsync"   name="e3-recsync" />
   <project path="siteMod/timing/devlib2"   name="e3-devlib2" />
   <project path="siteMod/timing/mrfioc2"   name="e3-mrfioc2" />
+  <project path="platform/pkgs"  name="pkg_automation" remote="jeonghanlee" >
+    <linkfile src="pkg_automation.bash" dest="pkg.bash"/>
+  </project>
+  <project path="system/etherlabmaster" name="etherlabmaster" />
+  <project path="system/lmfit" name="lmfit-env" />
 
 </manifest>
