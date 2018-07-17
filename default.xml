@@ -24,5 +24,7 @@
   <project path="siteMod/common/StreamDevice" name="e3-StreamDevice" />
   <project path="siteMod/common/s7plc"     name="e3-s7plc"     />
   <project path="siteMod/common/recsync"   name="e3-recsync" />
+  <project path="siteMod/timing/devlib2"   name="e3-devlib2" />
+  <project path="siteMod/timing/mrfioc2"   name="e3-mrfioc2" />
 
 </manifest>
