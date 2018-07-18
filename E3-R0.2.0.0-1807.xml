@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <remote  name="icshwi"
            fetch="https://github.com/icshwi/"/>
@@ -11,5 +11,8 @@
   
   <project path="base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
   <project path="require" name="e3-require" revision="refs/tags/R0.2.0.0" />
+  <project path="tools/scripts" name="e3-builders" >
+    <linkfile src="E3.Makefile" dest="Makefile"/>
+  </project>
 
 </manifest>
