@@ -9,8 +9,8 @@
            remote="icshwi"
            sync-j="2" />
   
-  <project path="base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
-  <project path="require" name="e3-require" revision="refs/tags/R0.2.0.0" />
+  <project path="builder/base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
+  <project path="builder/require" name="e3-require" revision="refs/tags/R0.2.0.0" />
   <project path="builder" name="e3-builder" >
     <linkfile src="e3.Makefile" dest="Makefile"/>
   </project>
