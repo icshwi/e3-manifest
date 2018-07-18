@@ -12,7 +12,7 @@
   <project path="base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
   <project path="require" name="e3-require" revision="refs/tags/R0.2.0.0" />
   <project path="builder" name="e3-builder" >
-    <linkfile src="Makefile" dest="Makefile"/>
+    <linkfile src="e3.Makefile" dest="Makefile"/>
   </project>
 
 </manifest>
