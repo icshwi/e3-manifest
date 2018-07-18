@@ -9,7 +9,7 @@
            remote="icshwi"
            sync-j="2" />
   
-  <project path="base"  name="e3-base"  revision="R0.2.0.0"  />
-  <project path="require" name="e3-require" revision="R0.2.0.0" />
+  <project path="base"  name="e3-base"  revision="tags/R0.2.0.0"  />
+  <project path="require" name="e3-require" revision="tags/R0.2.0.0" />
 
 </manifest>
