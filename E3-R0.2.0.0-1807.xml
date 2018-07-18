@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="icshwi"
+           fetch="https://github.com/icshwi/"/>
+  <remote  name="han"
+           fetch="https://github.com/jeonghanlee/"/>
+  
+  <default revision="master"
+           remote="icshwi"
+           sync-j="2" />
+  
+  <project path="base"  name="e3-base"  revision="R0.2.0.0"  />
+  <project path="require" name="e3-require" revision="R0.2.0.0" />
+
+</manifest>
