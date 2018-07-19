@@ -7,7 +7,7 @@
   
   <default revision="master"
            remote="icshwi"
-           sync-j="2" />
+           sync-j="1" />
   
   <project path="builder/base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  group="base" />
   <project path="builder/require" name="e3-require" revision="refs/tags/R0.2.0.0" group="base" />
