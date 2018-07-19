@@ -9,11 +9,28 @@
            remote="icshwi"
            sync-j="2" />
   
-  <project path="builder/base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
-  <project path="builder/require" name="e3-require" revision="refs/tags/R0.2.0.0" />
-  <project path="builder/common/iocStats" name="e3-iocStats" revision="refs/tags/R0.2.0.0" />
+  <project path="builder/base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  group="base" />
+  <project path="builder/require" name="e3-require" revision="refs/tags/R0.2.0.0" group="base" />
+  <project path="builder/common/00.iocStats" name="e3-iocStats" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/01.autosave" name="e3-autosave" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/02.asyn" name="e3-asyn" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/03.busy" name="e3-busy" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/04.modbus" name="e3-modbus" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/05.ipmiComm" name="e3-ipmiComm" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/06.sequencer" name="e3-sequencer" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/07.sscan" name="e3-sscan" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/08.std" name="e3-std" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/09.ip" name="e3-std" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/10.calc" name="e3-calc" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/11.pcre" name="e3-pcre" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/12.StreamDevice" name="e3-StreamDevice" revision="refs/tags/R0.2.0.0" group="common"/>
+  <project path="builder/common/13.s7plc" name="e3-s7plc" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/14.recsync" name="e3-recsync" revision="refs/tags/R0.2.0.0"  group="common"/>
   <project path="builder" name="e3-builder" >
     <linkfile src="e3.Makefile" dest="Makefile"/>
+  </project>
+  <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
+    <linkfile src="pkg_automation.bash" dest="pkg.bash"/>
   </project>
 
 </manifest>
