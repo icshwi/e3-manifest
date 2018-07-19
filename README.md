@@ -41,3 +41,15 @@ repo init -u https://github.com/jeonghanlee/manifest.git -m test.xml
 ```
 repo sync
 ```
+
+## Setup E3
+```
+make all
+```
+
+## E3-R0.2.0.0-1807 Release
+
+```
+repo init -u https://github.com/jeonghanlee/manifest.git -m E3-R0.2.0.0-1807.xml
+repo sync -m E3-R0.2.0.0-1807.xml
+```
