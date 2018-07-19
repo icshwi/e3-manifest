@@ -11,7 +11,7 @@
   
   <project path="builder/base"  name="e3-base"  revision="refs/tags/R0.2.0.0"  />
   <project path="builder/require" name="e3-require" revision="refs/tags/R0.2.0.0" />
-  <project path="builder/common/iocStats" name="e3-iocStats" revision="ref/tags/R0.2.0.0" />
+  <project path="builder/common/iocStats" name="e3-iocStats" revision="refs/tags/R0.2.0.0" />
   <project path="builder" name="e3-builder" >
     <linkfile src="e3.Makefile" dest="Makefile"/>
   </project>
