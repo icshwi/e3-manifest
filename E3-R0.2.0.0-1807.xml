@@ -20,7 +20,7 @@
   <project path="builder/common/06.sequencer" name="e3-sequencer" revision="refs/tags/R0.2.0.0" group="common" />
   <project path="builder/common/07.sscan" name="e3-sscan" revision="refs/tags/R0.2.0.0" group="common" />
   <project path="builder/common/08.std" name="e3-std" revision="refs/tags/R0.2.0.0" group="common" />
-  <project path="builder/common/09.ip" name="e3-std" revision="refs/tags/R0.2.0.0" group="common" />
+  <project path="builder/common/09.ip" name="e3-ip" revision="refs/tags/R0.2.0.0" group="common" />
   <project path="builder/common/10.calc" name="e3-calc" revision="refs/tags/R0.2.0.0" group="common" />
   <project path="builder/common/11.pcre" name="e3-pcre" revision="refs/tags/R0.2.0.0" group="common" />
   <project path="builder/common/12.StreamDevice" name="e3-StreamDevice" revision="refs/tags/R0.2.0.0" group="common"/>
