@@ -120,7 +120,7 @@
   <!-- Extra Modules -->
 
   <!--
-  <project group="extra"   name="e3-snmp"         path="builder/extra/00.snmp"          />
+  <project group="extra"   name="e3-snmp"         path="builder/extra/00.snmp"       revision="refs/tags/R0.1.0.0"     />
   -->
   
   <!-- Required Packages --> 
