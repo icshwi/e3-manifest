@@ -49,7 +49,15 @@ make all
 
 ## E3-R0.2.0.0-1807 Release
 
+* Init the E3 manifest
 ```
 repo init -u https://github.com/jeonghanlee/manifest.git -m E3-R0.2.0.0-1807.xml
-repo sync -m E3-R0.2.0.0-1807.xml
+```
+* Sync
+```
+repo sync --no-clone-bundle
+```
+* Force Sync
+```
+repo sync --force-sync --no-clone-bundle
 ```
