@@ -10,7 +10,6 @@
            sync-j="4" />
 
   <project path="builder" name="e3-builder" >
-    <linkfile src="builder.Makefile" dest="builder/Makefile"/>
     <linkfile src="e3.Makefile" dest="Makefile"/>
     <linkfile src="RELEASE.local" dest="builder/common/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/timing/RELEASE.local" />
