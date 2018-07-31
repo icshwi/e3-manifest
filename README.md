@@ -52,6 +52,7 @@ make all
 * Init the E3 manifest
 ```
 repo init -u https://github.com/jeonghanlee/manifest.git -m E3-R0.2.0.0-1807.xml
+repo init -u https://github.com/jeonghanlee/manifest.git -m e3-180801.xml
 ```
 * Sync
 ```

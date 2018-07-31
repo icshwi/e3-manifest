@@ -10,6 +10,7 @@
            sync-j="4" />
 
   <project path="builder" name="e3-builder" >
+    <linkfile src="builder.Makefile" dest="builder/Makefile"/>
     <linkfile src="e3.Makefile" dest="Makefile"/>
     <linkfile src="RELEASE.local" dest="builder/common/RELEASE.local" />
     <!--
@@ -41,20 +42,16 @@
 
 
   <!-- Timing Modules -->
-  <!--
   <project group="timing"   name="e3-devlib2"  path="builder/timing/00.devlib2"    revision="refs/tags/R0.2.0.0" />
   <project group="timing"   name="e3-mrfioc2"  path="builder/timing/01.mrfioc2"    revision="refs/tags/R0.2.0.0" />
-  --> 
-
+ 
   <!-- V4 Modules -->
-  <!--
-  <project group="v4"   name="e3-pvData"         Path="builder/v4/00.pvData"           revision="refs/tags/R0.0.0.0"  />
-  <project group="v4"   name="e3-pvAccess"       path="builder/v4/01.pvAccess"         revision="refs/tags/R0.0.0.0"  />
-  <project group="v4"   name="e3-pva2pva"        path="builder/v4/02.pva2pva"          revision="refs/tags/R0.0.0.0"  />
-  <project group="v4"   name="e3-pvDatabase"     path="builder/v4/03.pvDatabase"       revision="refs/tags/R0.0.0.0"  />
-  <project group="v4"   name="e3-normativeTypes" path="builder/v4/04.normativeTypes"   revision="refs/tags/R0.0.0.0"  />
-  <project group="v4"   name="e3-pvaClient"      path="builder/v4/05.pvaClient"        revision="refs/tags/R0.0.0.0"  />
-  -->
+  <project group="v4"   name="e3-pvData"         Path="builder/v4/00.pvData"           revision="refs/tags/R0.1.0.0"  />
+  <project group="v4"   name="e3-pvAccess"       path="builder/v4/01.pvAccess"         revision="refs/tags/R0.1.0.0"  />
+  <project group="v4"   name="e3-pva2pva"        path="builder/v4/02.pva2pva"          revision="refs/tags/R0.1.0.0"  />
+  <project group="v4"   name="e3-pvDatabase"     path="builder/v4/03.pvDatabase"       revision="refs/tags/R0.1.0.0"  />
+  <project group="v4"   name="e3-normativeTypes" path="builder/v4/04.normativeTypes"   revision="refs/tags/R0.1.0.0"  />
+  <project group="v4"   name="e3-pvaClient"      path="builder/v4/05.pvaClient"        revision="refs/tags/R0.1.0.0"  />
 
   <!-- AreaDector Modules -->
   <!--
