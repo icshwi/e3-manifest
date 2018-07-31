@@ -10,12 +10,11 @@
            sync-j="4" />
 
   <project path="builder" name="e3-builder" >
+    <linkfile src="builder.Makefile" dest="builder/Makefile"/>
     <linkfile src="e3.Makefile" dest="Makefile"/>
     <linkfile src="RELEASE.local" dest="builder/common/RELEASE.local" />
-    <!--
     <linkfile src="RELEASE.local" dest="builder/timing/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/v4/RELEASE.local" />
-    -->
   </project>
 
   <!-- Base & Require --> 
@@ -39,19 +38,19 @@
   <project path="builder/common/13.s7plc"        name="e3-s7plc"        revision="refs/tags/R0.2.0.0"  group="common" />
   <project path="builder/common/14.recsync"      name="e3-recsync"      revision="refs/tags/R0.2.0.0"  group="common" />
 
-  <!-- Timing Modules 
+  <!-- Timing Modules -->
   <project path="builder/timing/00.devlib2"      name="e3-devlib2"      revision="refs/tags/R0.2.0.0"  group="timing" />
   <project path="builder/timing/01.mrfioc2"      name="e3-mrfioc2"      revision="refs/tags/R0.2.0.0"  group="timing" />
-  --> 
+ 
 
-  <!-- V4 Modules 
-  <project path="builder/v4/00.pvData"           name="e3-pvData"         revision="refs/tags/R0.0.0.0"  group="v4" />
-  <project path="builder/v4/01.pvAccess"         name="e3-pvAccess"       revision="refs/tags/R0.0.0.0"  group="v4" />
-  <project path="builder/v4/02.pva2pva"          name="e3-pva2pva"        revision="refs/tags/R0.0.0.0"  group="v4" />
-  <project path="builder/v4/03.pvDatabase"       name="e3-pvDatabase"     revision="refs/tags/R0.0.0.0"  group="v4" />
-  <project path="builder/v4/04.normativeTypes"   name="e3-normativeTypes" revision="refs/tags/R0.0.0.0"  group="v4" />
-  <project path="builder/v4/05.pvaClient"        name="e3-pvaClient"      revision="refs/tags/R0.0.0.0"  group="v4" />
-  -->
+  <!-- V4 Modules -->
+  <project path="builder/v4/00.pvData"           name="e3-pvData"         revision="refs/tags/R0.1.0.0"  group="v4" />
+  <project path="builder/v4/01.pvAccess"         name="e3-pvAccess"       revision="refs/tags/R0.1.0.0"  group="v4" />
+  <project path="builder/v4/02.pva2pva"          name="e3-pva2pva"        revision="refs/tags/R0.1.0.0"  group="v4" />
+  <project path="builder/v4/03.pvDatabase"       name="e3-pvDatabase"     revision="refs/tags/R0.1.0.0"  group="v4" />
+  <project path="builder/v4/04.normativeTypes"   name="e3-normativeTypes" revision="refs/tags/R0.1.0.0"  group="v4" />
+  <project path="builder/v4/05.pvaClient"        name="e3-pvaClient"      revision="refs/tags/R0.1.0.0"  group="v4" />
+ 
   
   <!-- Required Packages --> 
   <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
