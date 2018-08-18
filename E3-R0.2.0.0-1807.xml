@@ -124,5 +124,9 @@
   <project path="platform/pkgs"  name="pkg_automation" group="pkg" remote="han" >
     <linkfile src="pkg_automation.bash" dest="pkg.bash"/>
   </project>
-
+  <project path="platform/opencv"   name="opencv-env"     remote="han"  group="pkg" />
+  <project path="platform/lmfit"    name="lmfit-env"      remote="han"  group="pkg" />
+  <project path="platform/ethercat" name="etherlabmaster" remote="ess"  group="pkg" />
+  <project path="platform/niocs"    name="epics_NIOCs"    remote="han"  group="pkg" />
+  
 </manifest>
