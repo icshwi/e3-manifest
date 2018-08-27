@@ -20,7 +20,7 @@
 
   <!-- Base & Require --> 
   <project path="builder/base"                   name="e3-base"         revision="refs/tags/R0.2.0.0"  group="base"   />
-  <project path="builder/require"                name="e3-require"      revision="refs/tags/R0.2.0.0"  group="base"   >
+  <project path="builder/require"                name="e3-require"      revision="refs/tags/R0.2.0.1"  group="base"   >
     <linkfile src="tools/setE3Env.bash" dest="setE3Env.bash" />
   </project>
   
