@@ -20,12 +20,14 @@
     <linkfile src="RELEASE.local" dest="builder/ethercat/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/ioxos0/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/ioxos1/RELEASE.local" />
+    <linkfile src="RELEASE.local" dest="builder/llrf/RELEASE.local" />
+    <linkfile src="RELEASE.local" dest="builder/bi/RELEASE.local" />
   </project>
 
   <!-- Base & Require --> 
   <project path="builder/base"                            name="e3-base"             revision="refs/tags/R0.2.0.0"    group="base"  />
   <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.1"    group="require"   >
-    <linkfile src="tools/setE3Env.bash" dest="180904-setE3Env.bash" />
+    <linkfile src="tools/setE3Env.bash" dest="000.setE3Env.bash" />
   </project>
   
 
@@ -107,6 +109,15 @@
   <project path="builder/llrf/300.sis8300"                name="e3-sis8300"          revision="refs/tags/R0.1.0.0"    group="llrf" />
   <project path="builder/llrf/400.sis8300llrfdrv"         name="e3-sis8300llrfdrv"   revision="refs/tags/R0.1.0.0"    group="llrf" />
   <project path="builder/llrf/500.sis8300llrf"            name="e3-sis8300llrf"      revision="refs/tags/R0.0.0.1"    group="llrf" />
+
+
+  <!-- BI Modules -->
+  
+  <project path="builder/llrf/000.adsis8300"              name="e3-adsis8300"        revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/llrf/100.adsis8300bcm"           name="e3-adsis8300bcm"     revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/llrf/200.adsis8300bpm"           name="e3-adsis8300bpm"     revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/llrf/300.adsis8300fc"            name="e3-adsis8300fc"      revision="refs/tags/R0.0.0.1"    group="bi" />
+ 
   
   <!-- Required Packages --> 
   <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
