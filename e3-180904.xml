@@ -11,6 +11,7 @@
 
   <project path="builder" name="e3-builder" >
     <linkfile src="e3.Makefile" dest="Makefile"/>
+    <linkfile src="RELEASE.local" dest="builder/require/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/common/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/timing/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/v4/RELEASE.local" />
@@ -23,8 +24,8 @@
 
   <!-- Base & Require --> 
   <project path="builder/base"                            name="e3-base"             revision="refs/tags/R0.2.0.0"    group="base"  />
-  <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.1"    group="base"   >
-    <linkfile src="tools/setE3Env.bash" dest="setE3Env.bash" />
+  <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.1"    group="require"   >
+    <linkfile src="tools/setE3Env.bash" dest="180904-setE3Env.bash" />
   </project>
   
 
