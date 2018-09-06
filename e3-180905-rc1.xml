@@ -113,19 +113,20 @@
 
   <!-- BI Modules -->
   
-  <project path="builder/llrf/000.adsis8300"              name="e3-adsis8300"        revision="refs/tags/R0.0.0.1"    group="bi" />
-  <project path="builder/llrf/100.adsis8300bcm"           name="e3-adsis8300bcm"     revision="refs/tags/R0.0.0.1"    group="bi" />
-  <project path="builder/llrf/200.adsis8300bpm"           name="e3-adsis8300bpm"     revision="refs/tags/R0.0.0.1"    group="bi" />
-  <project path="builder/llrf/300.adsis8300fc"            name="e3-adsis8300fc"      revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/bi/000.adsis8300"              name="e3-adsis8300"        revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/bi/100.adsis8300bcm"           name="e3-adsis8300bcm"     revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/bi/200.adsis8300bpm"           name="e3-adsis8300bpm"     revision="refs/tags/R0.0.0.1"    group="bi" />
+  <project path="builder/bi/300.adsis8300fc"            name="e3-adsis8300fc"      revision="refs/tags/R0.0.0.1"    group="bi" />
  
   
   <!-- Required Packages --> 
   <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
     <linkfile src="pkg_automation.bash" dest="pkg.bash"/>
   </project>
-  <project path="platform/opencv"   name="opencv-env"     remote="han"     group="pkg" />
-  <project path="platform/lmfit"    name="lmfit-env"      remote="han"     group="pkg" />
-  <project path="platform/ethercat" name="etherlabmaster" remote="icshwi"  group="pkg" />
-  <project path="platform/niocs"    name="epics_NIOCs"    remote="han"     group="pkg" />
+  <project path="platform/opencv"   name="opencv-env"     remote="han"     group="platform" />
+  <project path="platform/lmfit"    name="lmfit-env"      remote="han"     group="platform" />
+  <project path="platform/ethercat" name="etherlabmaster" remote="icshwi"  group="platform" />
+  <project path="platform/niocs"    name="epics_NIOCs"    remote="han"     group="platform" />
+  <project path="platform/tools"    name="e3-tools"       remote="icshwi"  group="platform" />
   
 </manifest>
