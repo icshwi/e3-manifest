@@ -22,10 +22,11 @@
     <linkfile src="RELEASE.local" dest="builder/ioxos1/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/llrf/RELEASE.local" />
     <linkfile src="RELEASE.local" dest="builder/bi/RELEASE.local" />
+    <linkfile src="README.md"     dest="README" />
   </project>
 
   <!-- Base & Require --> 
-  <project path="builder/base"                            name="e3-base"             revision="refs/tags/R0.2.0.0"    group="base"  />
+  <project path="builder/epics-base"                            name="e3-base"             revision="refs/tags/R0.2.0.0"    group="base"  />
   <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.2"    group="require"   >
     <linkfile src="tools/setE3Env.bash" dest="000.setE3Env.bash" />
   </project>
@@ -45,7 +46,7 @@
   <project path="builder/common/a00.calc"                 name="e3-calc"             revision="refs/tags/R0.2.0.1"    group="common" />
   <project path="builder/common/b00.pcre"                 name="e3-pcre"             revision="refs/tags/R0.2.0.0"    group="common" />
   <project path="builder/common/c00.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.0"    group="common" />
-  <project path="builder/common/c01.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.3.0.0"    group="common" />
+  <project path="builder/common/c01.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.3.0.1"    group="common" />
   <project path="builder/common/d00.s7plc"                name="e3-s7plc"            revision="refs/tags/R0.2.0.0"    group="common" />
   <project path="builder/common/e00.recsync"              name="e3-recsync"          revision="refs/tags/R0.2.0.0"    group="common" />
 
