@@ -11,7 +11,6 @@
 
   <project path="builder" name="e3-builder"  revision="047e2784928f5d281bb3df154613a7138dd11e99" >
     <linkfile src="e3.Makefile" dest="Makefile"/>
-    <linkfile src="RELEASE.local" dest="builder/RELEASE.local" />
     <linkfile src="README.md"     dest="README" />
   </project>
 
