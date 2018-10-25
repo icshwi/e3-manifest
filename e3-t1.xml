@@ -10,7 +10,7 @@
            sync-j="4" />
 
   <project path="builder" name="e3-builder"  revision="047e2784928f5d281bb3df154613a7138dd11e99" >
-    <linkfile src="e3.Makefile" dest="Makefile"/>
+    <linkfile src="e3.Makefile"   dest="Makefile"/>
     <linkfile src="README.md"     dest="README" />
   </project>
 
@@ -19,12 +19,12 @@
   <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.2"    group="require"   >
     <linkfile src="tools/setE3Env.bash" dest="000.setE3Env.bash" />
   </project>
-  
 
   <!-- Common Modules --> 
   <project path="builder/common/200.asyn"                 name="e3-asyn"             revision="refs/tags/R0.2.0.0"    group="common" />
   <project path="builder/common/b00.pcre"                 name="e3-pcre"             revision="refs/tags/R0.2.0.0"    group="common" />
   <project path="builder/common/c00.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.0"    group="common" />
+  <project path="builder/common/c01.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.1"    group="common" />
   
   
   <!-- Required Packages --> 
