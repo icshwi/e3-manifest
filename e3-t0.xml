@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <remote  name="icshwi"
+           fetch="https://github.com/icshwi/"/>
+  <remote  name="han"
+           fetch="https://github.com/jeonghanlee/"/>
+  
+  <default revision="master"
+           remote="icshwi"
+           sync-j="4" />
+
+  <project path="builder" name="e3-builder"  revision="047e2784928f5d281bb3df154613a7138dd11e99" >
+    <linkfile src="e3.Makefile" dest="Makefile"/>
+    <linkfile src="README.md"     dest="README" />
+  </project>
+
+  <!-- Base & Require --> 
+  <project path="builder/epics-base"                      name="e3-base"             revision="refs/tags/R0.2.0.0"    group="base"  />
+  <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/R0.2.0.2"    group="require"   >
+    <linkfile src="tools/setE3Env.bash" dest="000.setE3Env.bash" />
+  </project>
+  
+
+  <!-- Common Modules --> 
+  <project path="builder/common/200.asyn"                 name="e3-asyn"             revision="refs/tags/R0.2.0.0"    group="common" />
+  <project path="builder/common/700.sscan"                name="e3-sscan"            revision="refs/tags/R0.2.0.0"    group="common" />
+  <project path="builder/common/b00.pcre"                 name="e3-pcre"             revision="refs/tags/R0.2.0.0"    group="common" />
+  <project path="builder/common/c00.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.0"    group="common" />
+  
+  
+  <!-- Required Packages --> 
+  <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
+    <linkfile src="pkg_automation.bash" dest="pkg.bash"/>
+  </project>
+  <project path="platform/opencv"   name="opencv-env"     remote="han"     group="platform" />
+  <project path="platform/lmfit"    name="lmfit-env"      remote="han"     group="platform" />
+  <project path="platform/ethercat" name="etherlabmaster" remote="icshwi"  group="platform" />
+  <project path="platform/niocs"    name="epics_NIOCs"    remote="han"     group="platform" />
+  <project path="platform/tools"    name="e3-tools"       remote="icshwi"  group="platform" />
+  <project path="platform/pciids"   name="pciids"         remote="han"     group="platform" />
+  
+</manifest>
