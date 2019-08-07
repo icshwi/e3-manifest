@@ -9,108 +9,77 @@
            remote="icshwi"
            sync-j="4" />
 
-  <project path="builder" name="e3-builder"  revision="507e8c7370111c3a9ca34a3a4ea1e39c369da339" >
-    <linkfile src="e3.Makefile" dest="Makefile"/>
-    <linkfile src="README.md"     dest="README" />
-  </project>
-
   <!-- Base & Require --> 
-  <project path="builder/epics-base"                      name="e3-base"             revision="refs/tags/7.0.3-NA/7.0.3-0ec707c-1908061651"       group="base"  />
-  <project path="builder/require/000.require"             name="e3-require"          revision="refs/tags/7.0.3-3.1.0/3.1.0-69aed08-1908061715"    group="require"   >
+  <project path="epics-base"                      name="e3-base"             revision="refs/tags/7.0.3-NA/7.0.3-0ec707c-1908061651"       group="base"  />
+  <project path="require/000.require"             name="e3-require"          revision="refs/tags/7.0.3-3.1.0/3.1.0-69aed08-1908061715"    group="require"   >
     <linkfile src="tools/setE3Env.bash" dest="000.setE3Env.bash" />
   </project>
   
 
   <!-- Common Modules --> 
-  <project path="builder/common/000.iocStats"             name="e3-iocStats"         revision="refs/tags/7.0.3-3.1.0/3.1.16-675178f-1908071446"    group="common" />
-  <!-- <project path="builder/common/100.autosave"             name="e3-autosave"         revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/200.asyn"                 name="e3-asyn"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/300.busy"                 name="e3-busy"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/400.modbus"               name="e3-modbus"           revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/500.ipmiComm"             name="e3-ipmiComm"         revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/600.sequencer"            name="e3-sequencer"        revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/700.sscan"                name="e3-sscan"            revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/800.std"                  name="e3-std"              revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/900.ip"                   name="e3-ip"               revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/a00.calc"                 name="e3-calc"             revision="refs/tags/R0.2.0.1"    group="common" /> -->
-  <!-- <project path="builder/common/b00.pcre"                 name="e3-pcre"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/c00.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/c01.StreamDevice"         name="e3-StreamDevice"     revision="d5427c1be7942d339e080310c899a4a9b41d3f05"    group="common" /> -->
-  <!-- <project path="builder/common/d00.s7plc"                name="e3-s7plc"            revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/e00.recsync"              name="e3-recsync"          revision="refs/tags/R0.2.0.0"    group="common" /> -->
-  <!-- <project path="builder/common/f00.MCoreUtils"           name="e3-MCoreUtils"       revision="refs/tags/R0.1.0.0"    group="common" /> -->
+  <project path="common/000.iocStats"             name="e3-iocStats"         revision="refs/tags/7.0.3-3.1.0/3.1.16-675178f-1908071446"    group="common" />
+  <!-- <project path="common/100.autosave"             name="e3-autosave"         revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/200.asyn"                 name="e3-asyn"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/300.busy"                 name="e3-busy"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/400.modbus"               name="e3-modbus"           revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/500.ipmiComm"             name="e3-ipmiComm"         revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/600.sequencer"            name="e3-sequencer"        revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/700.sscan"                name="e3-sscan"            revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/800.std"                  name="e3-std"              revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/900.ip"                   name="e3-ip"               revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/a00.calc"                 name="e3-calc"             revision="refs/tags/R0.2.0.1"    group="common" /> -->
+  <!-- <project path="common/b00.pcre"                 name="e3-pcre"             revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/c00.StreamDevice"         name="e3-StreamDevice"     revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/c01.StreamDevice"         name="e3-StreamDevice"     revision="d5427c1be7942d339e080310c899a4a9b41d3f05"    group="common" /> -->
+  <!-- <project path="common/d00.s7plc"                name="e3-s7plc"            revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/e00.recsync"              name="e3-recsync"          revision="refs/tags/R0.2.0.0"    group="common" /> -->
+  <!-- <project path="common/f00.MCoreUtils"           name="e3-MCoreUtils"       revision="refs/tags/R0.1.0.0"    group="common" /> -->
   
   <!-- <!-\- Timing Modules -\-> -->
-  <!-- <project path="builder/timing/000.devlib2"              name="e3-devlib2"          revision="refs/tags/R0.2.0.0"    group="timing" /> -->
-  <!-- <project path="builder/timing/100.mrfioc2"              name="e3-mrfioc2"          revision="refs/tags/R0.2.0.0"    group="timing" /> -->
+  <!-- <project path="timing/000.devlib2"              name="e3-devlib2"          revision="refs/tags/R0.2.0.0"    group="timing" /> -->
+  <!-- <project path="timing/100.mrfioc2"              name="e3-mrfioc2"          revision="refs/tags/R0.2.0.0"    group="timing" /> -->
  
 
-  <!-- <!-\- V4 Modules -\-> -->
-  <!-- <project path="builder/v4/000.pvData"                   name="e3-pvData"           revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-  <!-- <project path="builder/v4/100.pvAccess"                 name="e3-pvAccess"         revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-  <!-- <project path="builder/v4/200.pva2pva"                  name="e3-pva2pva"          revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-  <!-- <project path="builder/v4/300.pvDatabase"               name="e3-pvDatabase"       revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-  <!-- <project path="builder/v4/400.normativeTypes"           name="e3-normativeTypes"   revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-  <!-- <project path="builder/v4/500.pvaClient"                name="e3-pvaClient"        revision="refs/tags/R0.1.0.0"    group="v4" /> -->
-
   <!-- <!-\- AreaDector Modules -\-> -->
-  <!-- <project path="builder/areaDetector/000.ADSupport"      name="e3-ADSupport"        revision="refs/tags/R0.2.0.1"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/100.ADCore"         name="e3-ADCore"           revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/200.ADSimDetector"  name="e3-ADSimDetector"    revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/300.ADAndor"        name="e3-ADAndor"          revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/400.ADAndor3"       name="e3-ADAndor3"         revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/500.ADPointGrey"    name="e3-ADPointGrey"      revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
-  <!-- <project path="builder/areaDetector/600.ADProsilica"    name="e3-ADProsilica"      revision="refs/tags/R0.1.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/000.ADSupport"      name="e3-ADSupport"        revision="refs/tags/R0.2.0.1"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/100.ADCore"         name="e3-ADCore"           revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/200.ADSimDetector"  name="e3-ADSimDetector"    revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/300.ADAndor"        name="e3-ADAndor"          revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/400.ADAndor3"       name="e3-ADAndor3"         revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/500.ADPointGrey"    name="e3-ADPointGrey"      revision="refs/tags/R0.2.0.0"    group="areaDetector"/> -->
+  <!-- <project path="areaDetector/600.ADProsilica"    name="e3-ADProsilica"      revision="refs/tags/R0.1.0.0"    group="areaDetector"/> -->
   
   <!-- <!-\- Extra Modules -\-> -->
-  <!-- <project path="builder/extra/000.snmp"                  name="e3-snmp"             revision="refs/tags/R0.2.0.0"    group="extra"  /> -->
+  <!-- <project path="extra/000.snmp"                  name="e3-snmp"             revision="refs/tags/R0.2.0.0"    group="extra"  /> -->
 
 
   <!-- <!-\- EtherCAT and Motion Modules -\-> -->
-  <!-- <project path="builder/ethercat/000.exprtk"             name="e3-exprtk"           revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/100.motor"              name="e3-motor"            revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/101.motor"              name="e3-motor"            revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/200.ecmc"               name="e3-ecmc"             revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/300.ethercatmc"         name="e3-ethercatmc"       revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/301.ethercatmc"         name="e3-ethercatmc"       revision="refs/tags/R0.2.1.0"    group="ethercat"/> -->
-  <!-- <project path="builder/ethercat/400.ecmctraining"       name="e3-ecmctraining"     revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/000.exprtk"             name="e3-exprtk"           revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/100.motor"              name="e3-motor"            revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/101.motor"              name="e3-motor"            revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/200.ecmc"               name="e3-ecmc"             revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/300.ethercatmc"         name="e3-ethercatmc"       revision="refs/tags/R0.2.0.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/301.ethercatmc"         name="e3-ethercatmc"       revision="refs/tags/R0.2.1.0"    group="ethercat"/> -->
+  <!-- <project path="ethercat/400.ecmctraining"       name="e3-ecmctraining"     revision="refs/tags/R0.1.0.0"    group="ethercat"/> -->
 
   <!-- <!-\- IOxOS IFC Board Modules 00 -\-> -->
-  <!-- <project path="builder/ioxos0/000.keypress"             name="e3-keypress"         revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
-  <!-- <project path="builder/ioxos0/100.sysfs"                name="e3-sysfs"            revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
-  <!-- <project path="builder/ioxos0/200.symbolname"           name="e3-symbolname"       revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
-  <!-- <project path="builder/ioxos0/300.memDisplay"           name="e3-memDisplay"       revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
-  <!-- <project path="builder/ioxos0/400.regdev"               name="e3-regdev"           revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
-  <!-- <project path="builder/ioxos0/500.i2cDev"               name="e3-i2cDev"           revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/000.keypress"             name="e3-keypress"         revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/100.sysfs"                name="e3-sysfs"            revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/200.symbolname"           name="e3-symbolname"       revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/300.memDisplay"           name="e3-memDisplay"       revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/400.regdev"               name="e3-regdev"           revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
+  <!-- <project path="ioxos0/500.i2cDev"               name="e3-i2cDev"           revision="refs/tags/R0.2.0.0"    group="ioxos0"/> -->
 
 
   <!-- <!-\- IOxOS IFC Board Modules 01 -\-> -->
-  <!-- <project path="builder/ioxos1/000.tosca"                name="e3-tosca"            revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/100.tsclib"               name="e3-tsclib"           revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/200.ifcdaqdrv2"           name="e3-ifcdaqdrv2"       revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/300.nds3"                 name="e3-nds3"             revision="refs/tags/R0.2.0.1"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/400.nds3epics"            name="e3-nds3epics"        revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/500.ifc14edrv"            name="e3-ifc14edrv"        revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
-  <!-- <project path="builder/ioxos1/600.ifcfastint"           name="e3-ifcfastint"       revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/000.tosca"                name="e3-tosca"            revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/100.tsclib"               name="e3-tsclib"           revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/200.ifcdaqdrv2"           name="e3-ifcdaqdrv2"       revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/300.nds3"                 name="e3-nds3"             revision="refs/tags/R0.2.0.1"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/400.nds3epics"            name="e3-nds3epics"        revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/500.ifc14edrv"            name="e3-ifc14edrv"        revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
+  <!-- <project path="ioxos1/600.ifcfastint"           name="e3-ifcfastint"       revision="refs/tags/R0.2.0.0"    group="ioxos1"/> -->
 
-
-  <!-- <!-\- LLRF Modules -\-> -->
-  
-  <!-- <project path="builder/llrf/000.loki"                   name="e3-loki"             revision="refs/tags/R0.1.0.0"    group="llrf" /> -->
-  <!-- <project path="builder/llrf/100.nds"                    name="e3-nds"              revision="refs/tags/R0.1.0.0"    group="llrf" /> -->
-  <!-- <project path="builder/llrf/200.sis8300drv"             name="e3-sis8300drv"       revision="refs/tags/R0.1.0.0"    group="llrf" /> -->
-  <!-- <project path="builder/llrf/300.sis8300"                name="e3-sis8300"          revision="refs/tags/R0.1.0.0"    group="llrf" /> -->
-  <!-- <project path="builder/llrf/400.sis8300llrfdrv"         name="e3-sis8300llrfdrv"   revision="refs/tags/R0.1.0.0"    group="llrf" /> -->
-  <!-- <project path="builder/llrf/500.sis8300llrf"            name="e3-sis8300llrf"      revision="refs/tags/R0.0.0.1"    group="llrf" /> -->
-
-
-  <!-- <!-\- BI Modules -\-> -->
-  
-  <!-- <project path="builder/bi/000.adsis8300"              name="e3-adsis8300"        revision="refs/tags/R0.0.0.1"    group="bi" /> -->
-  <!-- <project path="builder/bi/100.adsis8300bcm"           name="e3-adsis8300bcm"     revision="refs/tags/R0.0.0.1"    group="bi" /> -->
-  <!-- <project path="builder/bi/200.adsis8300bpm"           name="e3-adsis8300bpm"     revision="refs/tags/R0.0.0.1"    group="bi" /> -->
-  <!-- <project path="builder/bi/300.adsis8300fc"            name="e3-adsis8300fc"      revision="refs/tags/R0.0.0.1"    group="bi" /> -->
- 
   
   <!-- Required Packages --> 
   <project path="platform/pkgs"  name="pkg_automation" remote="han" group="pkg" >
