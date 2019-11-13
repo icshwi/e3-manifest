@@ -41,10 +41,20 @@ e3_env $ repo sync --no-clone-bundle
 
 
 ### Step 4: Build
-```
-e3_env $ 
+
+* BASE
 
 ```
+e3_env $ cd 0.epics-base/
+0.epics-base ((7.0.3.1-NA/R-7.0.3.1-778a693-1911112218))$ make init
+0.epics-base ((7.0.3.1-NA/R-7.0.3.1-778a693-1911112218))$ make patch
+0.epics-base ((7.0.3.1-NA/R-7.0.3.1-778a693-1911112218))$ make build
+
+```
+* REQUIRE
+```
+```
+
 
 ### Step 5: Set the E3
 ```
