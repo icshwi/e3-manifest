@@ -43,10 +43,10 @@ jobs:
         ~/bin/repo sync --no-clone-bundle
         ~/bin/repo forall --groups=base -c 'make init && make patch && make build'
         ~/bin/repo forall --groups=require -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 --groups=common -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 --groups=timing -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 --groups=PSI -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 --groups=areaDetector -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 --groups=ethercat -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 --groups=common -c 'make all'
+        ~/bin/repo forall --jobs=1 --groups=timing -c 'make all'
+        ~/bin/repo forall --jobs=1 --groups=PSI -c 'make all'
+        ~/bin/repo forall --jobs=1 --groups=areaDetector -c 'make all'
+        ~/bin/repo forall --jobs=1 --groups=ethercat -c 'make all'
         
         
