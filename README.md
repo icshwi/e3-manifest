@@ -1,9 +1,14 @@
-E3 Manifest
+E3 Manifest : The single point release method
 ===
 [![Action Status](https://github.com/icshwi/e3-manifest/workflows/E3%20Building/badge.svg)](https://github.com/icshwi/e3-manifest/actions?workflow=E3+Building)
 
 This repo is the pilot project in order to achieve how we duplicate the exact single point of E3 by using repo [[3]].  Thus, we evaluate this repo to use generic repo commands and E3 building make rules without introducing any other tools except command line commands. 
 
+## Possible Senario
+* `T=t0` : We first setup the production E3 environment
+* `T=t1` : We add the master branch of stream module into the existent production E3 environment
+* `T=t2` : We upgrade the require version
+* `T=t3` : One Inkind would like to duplicate `T=t1` E3 in their institute. 
 
 
 ## Preparation
@@ -58,7 +63,7 @@ make install
 ```
 
 #### BASE
-From time to time, one should press `space` in one's keyboard. And then if one SEE `(END)`, type `esc` to return the console. 
+
 ```
 e3_env $ repo forall --groups=base -c 'make init && make patch && make build'
 ```
