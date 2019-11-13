@@ -1,0 +1,32 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install the packages
+      run: |
+        sudo apt update
+        sudo apt install -y linux-headers-$(uname -r) build-essential realpath ipmitool libtool automake tclx  tree screen re2c darcs 
+        sudo apt install -y libreadline-dev libxt-dev x11proto-print-dev libxmu-headers libxmu-dev libxpm-dev libxmuu-dev libxmuu1 libpcre++-dev python-dev libnetcdf-dev libhdf5-dev libpng-dev libbz2-dev libxml2-dev libusb-dev libusb-1.0-0-dev libudev-dev libsnmp-dev libraw1394-dev libboost-dev libboost-regex-dev libboost-filesystem-dev libopencv-dev
+        sudo apt install -y libtirpc-dev  libblosc-dev libtiff-dev
+    - uses: actions/checkout@v1
+    - name: Setup repo
+      run: |
+        mkdir -p ~/bin
+        export PATH=~/bin:$PATH
+        curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+        chmod a+x ~/bin/repo
+    - name: Download the manifest
+      run: | 
+        mkdir e3_env
+        cd e3_env
+        repo init -u https://github.com/icshwi/e3-manifest
+        repo sync --no-clone-bundle
+        repo forall -p --groups=base -c 'make init && make patch && make build'
+        repo forall -p --groups=require -c 'make init && make patch && make rebuild'
+        
