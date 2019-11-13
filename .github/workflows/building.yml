@@ -46,7 +46,6 @@ jobs:
         ~/bin/repo forall --jobs=1 -p --groups=common -c 'make init && make patch && make rebuild'
         ~/bin/repo forall --jobs=1 -p --groups=timing -c 'make init && make patch && make rebuild'
         ~/bin/repo forall --jobs=1 -p --groups=PSI -c 'make init && make patch && make rebuild'
-        ~/bin/repo forall --jobs=1 -p --groups=ioxos -c 'make init && make patch && make rebuild'
         ~/bin/repo forall --jobs=1 -p --groups=areaDetector -c 'make init && make patch && make rebuild'
         ~/bin/repo forall --jobs=1 -p --groups=ethercat -c 'make init && make patch && make rebuild'
         
