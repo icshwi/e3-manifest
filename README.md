@@ -1,5 +1,6 @@
 E3 Manifest
 ===
+[![Action Status](https://github.com/icshwi/e3-manifest/workflows/E3%20Building/badge.svg)](https://github.com/icshwi/e3-manifest/actions?workflow=E3+Building)
 
 This repo is the pilot project in order to achieve how we duplicate the exact single point of E3 by using repo [3].  Thus, we evaluate this repo to use generic repo commands and E3 building make rules without introducing any other tools except command line commands. 
 
