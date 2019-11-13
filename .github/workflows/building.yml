@@ -29,4 +29,11 @@ jobs:
         ~/bin/repo sync --no-clone-bundle
         ~/bin/repo forall -p --groups=base -c 'make init && make patch && make build'
         ~/bin/repo forall -p --groups=require -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=common -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=timing -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=PSI -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=ioxos -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=areaDetector -c 'make init && make patch && make rebuild'
+        ~/bin/repo forall --jobs=1 -p --groups=ethercat -c 'make init && make patch && make rebuild'
+        
         
