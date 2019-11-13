@@ -60,7 +60,7 @@ make install
 #### BASE
 From time to time, one should press `space` in one's keyboard. And then if one SEE `(END)`, type `esc` to return the console. 
 ```
-e3_env $ repo forall -p --groups=base -c 'make init && make patch && make build'
+e3_env $ repo forall --groups=base -c 'make init && make patch && make build'
 ```
 OR
 ```
@@ -73,7 +73,7 @@ e3_env $ cd 0.epics-base/
 
 #### REQUIRE
 ```
-e3_env $ repo forall -p --groups=require -c 'make init && make patch && make rebuild'
+e3_env $ repo forall --groups=require -c 'make init && make patch && make rebuild'
 ```
 OR
 ```
@@ -87,38 +87,17 @@ e3_env$ cd 0.00.require/
 #### Common modules
 
 ```
-e3_env$ repo forall --jobs=1 -p --groups=common -c 'make init && make patch && make rebuild'
-```
-OR
-```
-e3_env$ repo forall -p --groups=common -c 'make init >> ../common_init.log'
-e3_env$ repo forall -p --groups=common -c 'make patch >> ../common_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=common -c 'make build     >> ../common_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=common -c 'make install   >> ../common_install.log'
+e3_env$ repo forall --jobs=1 --groups=common -c 'make init && make patch && make rebuild'
 ```
 
 #### Timing modules
 ```
-e3_env$ repo forall --jobs=1 -p --groups=timing -c 'make init && make patch && make rebuild'
-```
-OR
-```
-e3_env$ repo forall -p --groups=timing -c 'make init >> ../timing_init.log'
-e3_env$ repo forall -p --groups=timing -c 'make patch >> ../timing_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=timing -c 'make build     >> ../timing_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=timing -c 'make install   >> ../timing_install.log'
+e3_env$ repo forall --jobs=1 --groups=timing -c 'make init && make patch && make rebuild'
 ```
 
 #### PSI modules
 ```
 e3_env$ repo forall --jobs=1 -p --groups=PSI -c 'make init && make patch && make rebuild'
-```
-OR
-```
-e3_env$ repo forall -p --groups=PSI -c 'make init >> ../PSI_init.log'
-e3_env$ repo forall -p --groups=PSI -c 'make patch >> ../PSI_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=PSI -c 'make build     >> ../PSI_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=PSI -c 'make install   >> ../PSI_install.log'
 ```
 
 #### IOxOS modules
@@ -126,25 +105,11 @@ Currently, few repositories need an access permission. Please contact us for the
 ```
 e3_env$ repo forall --jobs=1 -p --groups=ioxos -c 'make init && make patch && make rebuild'
 ```
-OR
 
-```
-e3_env$ repo forall -p --groups=ioxos -c 'make init >> ../ioxos_init.log'
-e3_env$ repo forall -p --groups=ioxos -c 'make patch >> ../ioxos_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=ioxos -c 'make build     >> ../ioxos_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=ioxos -c 'make install   >> ../ioxos_install.log'
-```
 
 #### AreaDetector modules
 ```
 e3_env$ repo forall --jobs=1 -p --groups=areaDetector -c 'make init && make patch && make rebuild'
-```
-OR
-```
-e3_env$ repo forall -p --groups=areaDetector -c 'make init >> ../areaDetector_init.log'
-e3_env$ repo forall -p --groups=areaDetector -c 'make patch >> ../areaDetector_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=areaDetector -c 'make build     >> ../areaDetector_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=areaDetector -c 'make install   >> ../areaDetector_install.log'
 ```
 
 #### Ethercat modules
@@ -152,15 +117,6 @@ Note that one should install the etherlab master first. Please see the reference
 ```
 e3_env$ repo forall --jobs=1 -p --groups=ethercat -c 'make init && make patch && make rebuild'
 ```
-OR
-```
-e3_env$ repo forall -p --groups=ethercat -c 'make init >> ../ethercat_init.log'
-e3_env$ repo forall -p --groups=ethercat -c 'make patch >> ../ethercat_patch.log'
-e3_env$ repo forall -p --jobs=1 --groups=ethercat -c 'make build     >> ../ethercat_build.log'
-e3_env$ repo forall -p --jobs=1 --groups=ethercat -c 'make install   >> ../ethercat_install.log'
-```
-
-
 
 ### Step 5: Set the E3
 ```
