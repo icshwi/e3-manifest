@@ -15,6 +15,20 @@ jobs:
         sudo apt install -y libreadline-dev libxt-dev x11proto-print-dev libxmu-headers libxmu-dev libxpm-dev libxmuu-dev libxmuu1 libpcre++-dev python-dev libnetcdf-dev libhdf5-dev libpng-dev libbz2-dev libxml2-dev libusb-dev libusb-1.0-0-dev libudev-dev libsnmp-dev libraw1394-dev libboost-dev libboost-regex-dev libboost-filesystem-dev libopencv-dev
         sudo apt install -y libtirpc-dev  libblosc-dev libtiff-dev
     - uses: actions/checkout@v1
+    - name: Install etherlab master
+      run: |
+          git clone https://github.com/icshwi/etherlabmaster
+          cd etherlabmaster
+          make init
+          make build
+          make install
+          sudo tee /etc/ld.so.conf.d/ethercat.conf >/dev/null <<EOF
+          /opt/etherlab/lib 
+          EOF
+          echo "Reading /etc/ld.so.conf.d/ethercat.conf"
+          cat /etc/ld.so.conf.d/ethercat.conf
+          echo "Updating ldconfig..."
+          sudo /sbin/ldconfig
     - name: Setup repo
       run: |
         mkdir -p ~/bin
