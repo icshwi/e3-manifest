@@ -92,35 +92,35 @@ e3_env$ cd 0.00.require/
 #### Common modules
 
 ```
-e3_env$ repo forall --jobs=1 --groups=common -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=common -c 'make all'
 ```
 
 #### Timing modules
 ```
-e3_env$ repo forall --jobs=1 --groups=timing -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=timing -c 'make all'
 ```
 
 #### PSI modules
 ```
-e3_env$ repo forall --jobs=1 --groups=PSI -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=PSI -c 'make all'
 ```
 
 #### IOxOS modules
 Currently, few repositories need an access permission. Please contact us for the permission.
 ```
-e3_env$ repo forall --jobs=1 --groups=ioxos -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=ioxos -c 'make all'
 ```
 
 
 #### AreaDetector modules
 ```
-e3_env$ repo forall --jobs=1 --groups=areaDetector -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=areaDetector -c 'make all'
 ```
 
 #### Ethercat modules
 Note that one should install the etherlab master first. Please see the reference [[5]].
 ```
-e3_env$ repo forall --jobs=1 --groups=ethercat -c 'make init && make patch && make rebuild'
+e3_env$ repo forall --jobs=1 --groups=ethercat -c 'make all'
 ```
 
 ### Step 5: Set the E3
