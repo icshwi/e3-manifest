@@ -2,7 +2,7 @@
 <manifest>
   <remote  name="icshwi" fetch="https://github.com/icshwi/"/>
   
-  <default revision="master" remote="icshwi" sync-j="4" />
+  <default revision="master" remote="icshwi" sync-j="1" />
 
   <!-- Base & Require --> 
   <project path="0.epics-base"    name="e3-base"         revision="refs/tags/7.0.3.1-NA/R-7.0.3.1-778a693-1911112218"     groups="base"     />
