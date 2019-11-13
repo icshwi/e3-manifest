@@ -6,11 +6,11 @@
 
   <!-- Base & Require --> 
   <project path="0.epics-base"    name="e3-base"         revision="refs/tags/7.0.3.1-NA/R-7.0.3.1-778a693-1911112218"     groups="base"     />
-  <project path="0.00.require"    name="e3-require"      revision="refs/tags/7.0.3.1-3.1.2/R-3.1.2-e0c84e4-1911121821"    groups="require"   >
-    <linkfile src="tools/setE3Env.bash" dest="0.00.setE3Env.bash" />
-  </project>
+  <project path="0.00.require"    name="e3-require"      revision="refs/tags/7.0.3.1-3.1.2/R-3.1.2-e0c84e4-1911121821"    groups="require"  />
+ 
   
   <!-- Common Modules -->
+  <!-- Can be generated via e3.bash -c tags -->
   <project path="0.00.000.ess" name="e3-ess" revision="refs/tags/7.0.3.1-3.1.2/R-0.0.1-49bdecf-1911112241" groups="common" />
   <project path="0.00.100.iocStats" name="e3-iocStats" revision="refs/tags/7.0.3.1-3.1.2/R-3.1.16-fbdf794-1911112242" groups="common" />
   <project path="0.00.200.autosave" name="e3-autosave" revision="refs/tags/7.0.3.1-3.1.2/R-5.10.0-ea27051-1911112242" groups="common" />
