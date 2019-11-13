@@ -127,13 +127,17 @@ e3_env $ iocsh.bash
 
 
 ## Additional commands
+### Suppress output messages
 
-* Initialize a repo with a specific manifest file (for example `a_specific_manifest.xml`) on the master branch
+```
+e3_env$ repo forall --jobs=1 -p --groups=ethercat -c 'make init && make patch && make -s rebuild'
+```
+### Initialize a repo with a specific manifest file
 ```
 repo init -u https://github.com/icshwi/e3-manifest -m a_specific_manifest.xml
 ```
 
-* Force Sync
+### Force Sync
 ```
 repo sync --force-sync --no-clone-bundle
 ```
