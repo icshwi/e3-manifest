@@ -25,8 +25,8 @@ jobs:
       run: | 
         mkdir e3_env
         cd e3_env
-        repo init -u https://github.com/icshwi/e3-manifest
-        repo sync --no-clone-bundle
-        repo forall -p --groups=base -c 'make init && make patch && make build'
-        repo forall -p --groups=require -c 'make init && make patch && make rebuild'
+        ~/bin/repo init -u https://github.com/icshwi/e3-manifest
+        ~/bin/repo sync --no-clone-bundle
+        ~/bin/repo forall -p --groups=base -c 'make init && make patch && make build'
+        ~/bin/repo forall -p --groups=require -c 'make init && make patch && make rebuild'
         
