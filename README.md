@@ -4,12 +4,19 @@ E3 Manifest : The single point release method
 
 This repo is the pilot project in order to achieve how we duplicate the exact single point of E3 by using repo [[3]].  Thus, we evaluate this repo to use generic repo commands and E3 building make rules without introducing any other tools except command line commands. 
 
+## Requirements
+
+The all E3 module repositories should be selected by a tag or git hash id. They are used to build a E3 manifest file. Each repository has its own corresponding BASE and REQUIRE versions in its `RELEASE` file. 
+
 ## Possible Scenario
+
+
 * `T=t0` : We first setup the production E3 environment
 * `T=t1` : We add the master branch of stream module into the existent production E3 environment
 * `T=t2` : We upgrade the require version
 * `T=t3` : One In-kind would like to duplicate `T=t1` E3 in their institute. 
 
+However, once we move the different base, require, or both versions, it is much better to move a brand-new manifest file. We can run one by one according to its time order. 
 
 ## Preparation
 
@@ -65,10 +72,6 @@ make install
 #### BASE
 
 ```
-e3_env $ repo forall --groups=base -c 'make all'
-```
-OR
-```
 e3_env $ repo forall --groups=base -c 'make init && make patch && make build'
 ```
 OR
@@ -79,13 +82,9 @@ e3_env $ cd 0.epics-base/
 0.epics-base ((7.0.3.1-NA/R-7.0.3.1-778a693-1911112218))$ make build
 0.epics-base ((7.0.3.1-NA/R-7.0.3.1-778a693-1911112218))$ cd ../
 ```
+Note that `make all` does not exist for BASE.
 
 #### REQUIRE
-
-```
-e3_env $ repo forall --groups=require -c 'make all'
-```
-OR
 
 ```
 e3_env $ repo forall --groups=require -c 'make init && make patch && make rebuild'
@@ -98,6 +97,11 @@ e3_env$ cd 0.00.require/
 0.00.require ((7.0.3.1-3.1.2/R-3.1.2-e0c84e4-1911121821))$ make build
 0.00.require ((7.0.3.1-3.1.2/R-3.1.2-e0c84e4-1911121821))$ make install
 0.00.require ((7.0.3.1-3.1.2/R-3.1.2-e0c84e4-1911121821))$ cd ..
+```
+OR
+
+```
+e3_env $ repo forall --groups=require -c 'make all'
 ```
 #### Common modules
 

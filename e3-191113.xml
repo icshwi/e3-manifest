@@ -4,15 +4,16 @@
        author   : Jeong Han Lee
        email    : jeonghan.lee@gmail.com
        date     : Thursday, November 14 21:52:50 CET 2019
-       revision : 0.0.2 
+       revision : 0.0.3
                  - 0.0.2 : tune base/require in order to use make all
+		 - 0.0.3 : remove make all for base
   -->
   <remote  name="icshwi" fetch="https://github.com/icshwi/"/>
   
   <default revision="master" remote="icshwi" sync-j="1" />
 
   <!-- Base & Require --> 
-  <project path="0.epics-base"    name="e3-base"         revision="refs/tags/7.0.3.1-NA/R-7.0.3.1-e84e524-1911142148"     groups="base"     />
+  <project path="0.epics-base"    name="e3-base"         revision="refs/tags/7.0.3.1-NA/R-7.0.3.1-683a893-1911142215"     groups="base"     />
   <project path="0.00.require"    name="e3-require"      revision="refs/tags/7.0.3.1-3.1.2/R-3.1.2-fd2039d-1911142147"    groups="require"  />
  
   
