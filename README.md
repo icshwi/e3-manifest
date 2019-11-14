@@ -4,11 +4,11 @@ E3 Manifest : The single point release method
 
 This repo is the pilot project in order to achieve how we duplicate the exact single point of E3 by using repo [[3]].  Thus, we evaluate this repo to use generic repo commands and E3 building make rules without introducing any other tools except command line commands. 
 
-## Possible Senario
+## Possible Scenario
 * `T=t0` : We first setup the production E3 environment
 * `T=t1` : We add the master branch of stream module into the existent production E3 environment
 * `T=t2` : We upgrade the require version
-* `T=t3` : One Inkind would like to duplicate `T=t1` E3 in their institute. 
+* `T=t3` : One In-kind would like to duplicate `T=t1` E3 in their institute. 
 
 
 ## Preparation
@@ -23,7 +23,7 @@ $ chmod a+x ~/bin/repo
 ```
 
 
-## Procedure
+## Procedure 
 
 ### Consideration
 
@@ -65,6 +65,10 @@ make install
 #### BASE
 
 ```
+e3_env $ repo forall --groups=base -c 'make all'
+```
+OR
+```
 e3_env $ repo forall --groups=base -c 'make init && make patch && make build'
 ```
 OR
@@ -77,6 +81,12 @@ e3_env $ cd 0.epics-base/
 ```
 
 #### REQUIRE
+
+```
+e3_env $ repo forall --groups=require -c 'make all'
+```
+OR
+
 ```
 e3_env $ repo forall --groups=require -c 'make init && make patch && make rebuild'
 ```
@@ -133,7 +143,7 @@ e3_env $ iocsh.bash
 
 ## Additional commands
 
-### Output messages will be rediected
+### Output messages will be redirected
 One needs to type `space` key from time to time in order to see all outputs such as stdin, stdout, stderr.
 
 ```
