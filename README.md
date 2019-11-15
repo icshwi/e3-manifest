@@ -114,25 +114,26 @@ e3_env$ repo forall --jobs=1 --groups=common -c 'make all'
 e3_env$ repo forall --jobs=1 --groups=timing -c 'make all'
 ```
 
-#### PSI modules
+#### PSI modules 
+Note that Common modules group should be installed before. 
 ```
 e3_env$ repo forall --jobs=1 --groups=PSI -c 'make all'
 ```
 
 #### IOxOS modules
-Currently, few repositories need an access permission. Please contact us for the permission.
+Note that Common modules group should be installed before. And currently, few repositories need an access permission. Please contact us for the permission.
 ```
 e3_env$ repo forall --jobs=1 --groups=ioxos -c 'make all'
 ```
 
-
 #### AreaDetector modules
+Note that Common modules group should be installed before. 
 ```
 e3_env$ repo forall --jobs=1 --groups=areaDetector -c 'make all'
 ```
 
 #### Ethercat modules
-Note that one should install the etherlab master first. Please see the reference [[5]].
+Note that one should install the etherlab master first. Please see the reference [[5]]. And Note that Common modules group should be installed before. 
 ```
 e3_env$ repo forall --jobs=1 --groups=ethercat -c 'make all'
 ```
