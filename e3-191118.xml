@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <!-- 
+       author   : Jeong Han Lee
+       email    : jeonghan.lee@gmail.com
+       date     : Monday, November 18 12:20:47 CET 2019
+       revision : 0.0.5
+                 - 0.0.2 : tune base/require in order to use make all
+		 - 0.0.3 : remove make all for base
+		 - 0.0.4 : update iocStats to ESS specific configuration
+		 - 0.0.5 : update iocStats to ESS specific configuration with require
+  -->
+  <remote  name="icshwi" fetch="https://github.com/icshwi/"/>
+  
+  <default revision="master" remote="icshwi" sync-j="1" />
+
+  <!-- Base & Require --> 
+  <project path="0.epics-base"    name="e3-base"         revision="refs/tags/7.0.3.1-NA/R-7.0.3.1-683a893-1911142215"     groups="base"     />
+  <project path="0.00.require"    name="e3-require"      revision="refs/tags/7.0.3.1-3.1.2/R-3.1.2-b02bfff-1911181214"    groups="require"  />
+ 
+  
+  <!-- Common Modules -->
+  <!-- Can be generated via e3.bash -c tags -->
+  <project path="0.00.000.ess" name="e3-ess" revision="refs/tags/7.0.3.1-3.1.2/R-0.0.1-49bdecf-1911112241" groups="common" />
+  <project path="0.00.100.autosave" name="e3-autosave" revision="refs/tags/7.0.3.1-3.1.2/R-5.10.0-ea27051-1911112242" groups="common" />
+  <project path="0.00.200.caPutLog" name="e3-caPutLog" revision="refs/tags/7.0.3.1-3.1.2/R-b544f92-8bf1fd7-1911121552" groups="common" />
+  <project path="0.00.300.asyn" name="e3-asyn" revision="refs/tags/7.0.3.1-3.1.2/R-4.36.0-c192d55-1911121611" groups="common" />
+  <project path="0.00.400.busy" name="e3-busy" revision="refs/tags/7.0.3.1-3.1.2/R-1.7.2-e45eda2-ecf0f7b-1911121611" groups="common" />
+  <project path="0.00.500.modbus" name="e3-modbus" revision="refs/tags/7.0.3.1-3.1.2/R-3.0.0-92b9a0a-1911121612" groups="common" />
+  <project path="0.00.600.ipmiComm" name="e3-ipmiComm" revision="refs/tags/7.0.3.1-3.1.2/R-4.2.0-ffbfb1f-1911121612" groups="common" />
+  <project path="0.00.700.seq" name="e3-seq" revision="refs/tags/7.0.3.1-3.1.2/R-2.2.7-585ba0e-1911121612" groups="common" />
+  <project path="0.00.800.sscan" name="e3-sscan" revision="refs/tags/7.0.3.1-3.1.2/R-2.11.3-5841897-1911121613" groups="common" />
+  <project path="0.00.900.std" name="e3-std" revision="refs/tags/7.0.3.1-3.1.2/R-3.6.1-90f09d3-1911121614" groups="common" />
+  <project path="0.00.a00.ip" name="e3-ip" revision="refs/tags/7.0.3.1-3.1.2/R-2.20.1-12c79e0-1911121614" groups="common" />
+  <project path="0.00.b00.calc" name="e3-calc" revision="refs/tags/7.0.3.1-3.1.2/R-3.7.3-13c49c6-1911121615" groups="common" />
+  <project path="0.00.c00.iocStats" name="e3-iocStats" revision="refs/tags/7.0.3.1-3.1.2/R-3.1.16-ff41cc1-1911181217" groups="common" />
+  <project path="0.00.d00.delaygen" name="e3-delaygen" revision="refs/tags/7.0.3.1-3.1.2/R-1.2.1-aacd7c2-1911121615" groups="common" />
+  <project path="0.00.e00.pcre" name="e3-pcre" revision="refs/tags/7.0.3.1-3.1.2/R-8.41.0-597b41d-1911121615" groups="common" />
+  <project path="0.00.f00.StreamDevice" name="e3-StreamDevice" revision="refs/tags/7.0.3.1-3.1.2/R-2.8.10-c48a619-1911121615" groups="common" />
+  <project path="0.00.g00.s7plc" name="e3-s7plc" revision="refs/tags/7.0.3.1-3.1.2/R-1.4.1-75d1202-1911121616" groups="common" />
+  <project path="0.00.h00.recsync" name="e3-recsync" revision="refs/tags/7.0.3.1-3.1.2/R-1.3.0-9705e52-f0d3fb0-1911121616" groups="common" />
+  <project path="0.00.i00.MCoreUtils" name="e3-MCoreUtils" revision="refs/tags/7.0.3.1-3.1.2/R-1.2.1-fb30d82-1911121617" groups="common" />
+
+  <!-- Timing Modules -->
+  <project path="0.00.000.devlib2" name="e3-devlib2" revision="refs/tags/7.0.3.1-3.1.2/R-2.9.0-31fd917-1911121617" groups="timing" />
+  <project path="0.00.100.mrfioc2" name="e3-mrfioc2" revision="refs/tags/7.0.3.1-3.1.2/R-2.2.0-rc7-aa11391-1911121618" groups="timing" />
+
+  <!-- PSI Modules -->
+  <project path="0.00.000.keypress" name="e3-keypress" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.0-dc930d3-1911121618" groups="PSI" />
+  <project path="0.00.100.sysfs" name="e3-sysfs" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.0-dfabf94-1911121618" groups="PSI" />
+  <project path="0.00.200.symbolname" name="e3-symbolname" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.2-430732c-1911121618" groups="PSI" />
+  <project path="0.00.300.memDisplay" name="e3-memDisplay" revision="refs/tags/7.0.3.1-3.1.2/R-1.2.1-0141af3-1911121619" groups="PSI" />
+  <project path="0.00.400.regdev" name="e3-regdev" revision="refs/tags/7.0.3.1-3.1.2/R-3.4.16-013a389-1911121619" groups="PSI" />
+  <project path="0.00.500.i2cDev" name="e3-i2cDev" revision="refs/tags/7.0.3.1-3.1.2/R-1.2.5-b48e473-1911121620" groups="PSI" />
+
+  <!-- IOxOS IFC Board Modules -->
+  <project path="0.00.000.tsclib" name="e3-tsclib" revision="refs/tags/7.0.3.1-3.1.2/R-4.0.1-08d4891-1911121620" groups="ioxos" />
+  <project path="0.00.100.ifcdaqdrv" name="e3-ifcdaqdrv" revision="refs/tags/7.0.3.1-3.1.2/R-4.0.0-beta-62efb2f-1911121620" groups="ioxos" />
+  <project path="0.00.200.nds3" name="e3-nds3" revision="refs/tags/7.0.3.1-3.1.2/R-3.0.0-2e30d1e-1911121621" groups="ioxos" />
+  <project path="0.00.300.nds3epics" name="e3-nds3epics" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.1-32f80d2-1911121621" groups="ioxos" />
+
+  <!-- EtherCAT and Motion Modules -->
+  <project path="0.00.000.exprtk" name="e3-exprtk" revision="refs/tags/7.0.3.1-3.1.2/R-1.2.0-dd860a6-1911121627" groups="ethercat" />
+  <project path="0.00.100.ecmc" name="e3-ecmc" revision="refs/tags/7.0.3.1-3.1.2/R-6.0.1-25ccd7b-1911121627" groups="ethercat" />
+  <project path="0.00.200.motor" name="e3-motor" revision="refs/tags/7.0.3.1-3.1.2/R-7.0.1-d898e85-1911121628" groups="ethercat" />
+  <project path="0.00.300.EthercatMC" name="e3-EthercatMC" revision="refs/tags/7.0.3.1-3.1.2/R-3.0.2-b0ffc82-1911121629" groups="ethercat" />
+  <project path="0.00.400.ecmccfg" name="e3-ecmccfg" revision="refs/tags/7.0.3.1-3.1.2/R-master-6b828ce-1911121650" groups="ethercat" />
+  <project path="0.00.500.BeckhoffADS" name="e3-BeckhoffADS" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.0-14685c4-1911121658" groups="ethercat" />
+  <project path="0.00.600.ads" name="e3-ads" revision="refs/tags/7.0.3.1-3.1.2/R-2.0.0-8e443ad-1911121658" groups="ethercat" />
+
+  <!-- AreaDector Modules -->
+  <project path="0.00.000.ADSupport" name="e3-ADSupport" revision="refs/tags/7.0.3.1-3.1.2/R-1.9.0-cfef359-1911121659" groups="areaDetector" />
+  <project path="0.00.100.ADCore" name="e3-ADCore" revision="refs/tags/7.0.3.1-3.1.2/R-3.7.0-2cfb7c7-1911121659" groups="areaDetector" />
+  <project path="0.00.200.ADSimDetector" name="e3-ADSimDetector" revision="refs/tags/7.0.3.1-3.1.2/R-2.9.0-50d4644-1911121659" groups="areaDetector" />
+  <project path="0.00.300.ADCSimDetector" name="e3-ADCSimDetector" revision="refs/tags/7.0.3.1-3.1.2/R-3f41fb0-f0ca78c-1911121700" groups="areaDetector" />
+  <project path="0.00.400.NDDriverStdArrays" name="e3-NDDriverStdArrays" revision="refs/tags/7.0.3.1-3.1.2/R-9cbc817-42f5f2f-1911121700" groups="areaDetector" />
+  <project path="0.00.500.ADAndor" name="e3-ADAndor" revision="refs/tags/7.0.3.1-3.1.2/R-9b26e5c-62d5aee-1911121700" groups="areaDetector" />
+  <project path="0.00.600.ADAndor3" name="e3-ADAndor3" revision="refs/tags/7.0.3.1-3.1.2/R-efba947-a2acc9e-1911121701" groups="areaDetector" />
+  <project path="0.00.700.ADPointGrey" name="e3-ADPointGrey" revision="refs/tags/7.0.3.1-3.1.2/R-9dda1cf-0c645f8-1911121701" groups="areaDetector" />
+  <project path="0.00.800.ADProsilica" name="e3-ADProsilica" revision="refs/tags/7.0.3.1-3.1.2/R-10bfc26-ef1bb9a-1911121701" groups="areaDetector" />
+  <project path="0.00.900.ADGenICam" name="e3-ADGenICam" revision="refs/tags/7.0.3.1-3.1.2/R-1.0.0-b329481-1911121702" groups="areaDetector" />
+  <project path="0.00.a00.ADPluginEdge" name="e3-ADPluginEdge" revision="refs/tags/7.0.3.1-3.1.2/R-86eb685-321f458-1911121702" groups="areaDetector" />
+  <project path="0.00.b00.ADPluginCalib" name="e3-ADPluginCalib" revision="refs/tags/7.0.3.1-3.1.2/R-0.0.1-f84a546-1911121702" groups="areaDetector" />
+
+  
+</manifest>
