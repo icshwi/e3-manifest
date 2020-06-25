@@ -1,3 +1,5 @@
+## LEGACY - THIS IS NOT A CURRENT METHOD TO MANAGE EPICS MODULE INSTALLATION/DEPLOYMENT AT ESS  
+
 E3 Manifest : The single point release method
 ===
 [![Action Status](https://github.com/icshwi/e3-manifest/workflows/E3%20Building/badge.svg)](https://github.com/icshwi/e3-manifest/actions?workflow=E3+Building)
